@@ -1,78 +1,35 @@
-# TwinCoder - Your Local AI Coding Companion
+# TwinCoder — Local AI Coding Assistant
 
-[![Python Version](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+## Overview
+TwinCoder is a locally-run AI coding assistant operating directly within the terminal, powered by Ollama. It provides a private, secure, and customizable coding experience with file system operations and tool execution capabilities.
 
-TwinCoder is a powerful, locally-run AI coding assistant that operates directly within your terminal. It leverages the capabilities of local LLMs through Ollama to provide a private, secure, and highly customizable coding experience.
+## Architecture & Pipeline
+1. **Interactive CLI (`cli/`)**: Rich terminal interface handling user input, alternate screen buffers, and styled rendering.
+2. **Core Agent (`core/`)**: Manages chat completion loops, tool dispatching, and conversation context.
+3. **Extensible Tools (`tools/`)**: Modular toolset allowing the AI agent to read files, write files, search file content, list directories, run shell commands, and save memory.
+4. **Ollama Service (`services/`)**: OpenAI-compatible client connection interfacing directly with local Ollama models.
 
-## 🚀 About The Project
+## Data
+- **Source**: Local project file directories and user terminal prompts.
 
-TwinCoder is designed for developers who value privacy and want to harness the power of AI without sending their code to third-party servers. By running on your local machine, it offers a sandboxed environment for code generation, analysis, and tool utilization.
+## Method & Algorithms
+- **Agentic Tool Calling**: Function calling loop supporting file inspection, replacement, shell execution, and memory persistence.
 
-**Key Features:**
+## Verified Results & Metrics
+- Built modular terminal assistant supporting secure local LLM inference, file system tool execution, and interactive CLI rendering.
 
-*   **Interactive Chat:** Engage in a dialogue with your AI assistant to ask questions, get code snippets, and brainstorm ideas.
-*   **File System Operations:** Grant the AI the ability to read, write, and list files, enabling it to understand and modify your codebase directly.
-*   **Command Execution:** Allow the AI to run shell commands, automating tasks like running tests, installing dependencies, or executing scripts.
-*   **Extensible Toolset:** The agent's capabilities can be expanded with new tools to meet the specific demands of your projects.
-*   **Local First:** Powered by Ollama, all processing happens on your machine, ensuring your data stays private.
+## Limitations & Caveats
+- Personal developer productivity tool; requires local Ollama instance running.
 
-## 🛠️ Getting Started
-
-Follow these steps to get your local instance of TwinCoder up and running.
-
-### Prerequisites
-
-*   **Python 3.11+**
-*   **Ollama:** Ensure Ollama is installed and running. You can download it from [ollama.ai](https://ollama.ai/).
-    *   You will also need to have a model pulled, for example: `ollama pull llama3`
-
-### Installation
-
-1.  **Clone the repository:**
-    ```sh
-    git clone https://github.com/your_username/twincoder.git
-    cd twincoder
-    ```
-
-2.  **Create and activate a virtual environment:**
-    ```sh
-    python3 -m venv .venv
-    source .venv/bin/activate
-    ```
-
-3.  **Install the required dependencies:**
-    ```sh
-    pip install -r requirements.txt
-    ```
-
-4.  **Configuration:**
-    Modify the `config.py` file to set your preferred Ollama model and other settings.
-
-## 🏃‍♀️ Usage
-
-To start the TwinCoder assistant, run the main script:
-
-```sh
+## Run Instructions
+```bash
+pip install -r requirements.txt
 python main.py
 ```
 
-This will launch the interactive CLI where you can start conversing with the AI.
+## CV Bullet Points
+- Developed TwinCoder, a terminal-based local AI coding assistant powered by Ollama, featuring modular tool execution (file read/write, search, shell commands) and interactive CLI rendering.
+- Designed secure local-first agent workflows ensuring developer code privacy without external API telemetry.
 
-## 🏗️ Project Structure
-
-*   `main.py`: The entry point for the application.
-*   `config.py`: Main configuration file for models and other settings.
-*   `cli/`: Handles the command-line interface, user input, and UI rendering.
-*   `core/`: Contains the core chat logic and agent orchestration.
-*   `services/`: Includes clients for interacting with external services like Ollama.
-*   `tools/`: Defines the tools that the AI agent can use (e.g., `read_file`, `run_command`).
-
-## 📄 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-## 🙏 Acknowledgments
-
-*   [Ollama](https://ollama.ai/)
-*   [Python](https://www.python.org/)
+## Claims to Avoid
+- Do not claim commercial AI coding assistant user base or enterprise IDE distribution.
