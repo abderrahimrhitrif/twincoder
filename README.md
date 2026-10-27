@@ -27,9 +27,5 @@ pip install -r requirements.txt
 python main.py
 ```
 
-## CV Bullet Points
-- Developed TwinCoder, a terminal-based local AI coding assistant powered by Ollama, featuring modular tool execution (file read/write, search, shell commands) and interactive CLI rendering.
-- Designed secure local-first agent workflows ensuring developer code privacy without external API telemetry.
-
 ## Claims to Avoid
 - Do not claim commercial AI coding assistant user base or enterprise IDE distribution.
